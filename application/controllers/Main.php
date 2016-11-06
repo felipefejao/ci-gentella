@@ -14,7 +14,7 @@ class Main extends CI_Controller{
     }
 
     function index(){
-        $this->callView('login');
+        $this->callView('home');
     }
 
     function callView($view){
