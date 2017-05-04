@@ -20,7 +20,12 @@ class Migration_Users extends CI_Migration{
             'senha' => array(
                 'type' => 'varchar',
                 'constraint' => 250,
-                'unsigned' => true
+                'null' => false
+            ),
+            'id_tipo_usuario' => array(
+                'type' => 'int',
+                'constraint' => 11,
+                'null' => false
             ),
             'datadd' => array(
                 'type' => 'datetime',
@@ -29,8 +34,9 @@ class Migration_Users extends CI_Migration{
         ));
         $this->dbforge->add_key('id_user',true);
 
-
+        $this->dbforge->add_field('CONSTRAINT FOREIGN KEY (id_tipo_usuario) REFERENCES tipo_usuario(id_tipo_usuario)');
         $this->dbforge->create_table('users');
+
 
     }
 

@@ -1,21 +1,22 @@
 <?php
-class Migration_Tipo_usuario extends CI_Migration{
+class Migration_Recursos extends CI_Migration{
     public function up(){
         $this->dbforge->add_field(array(
-            'id_tipo_usuario' => array(
+            'id_recurso' => array(
                 'type' => 'INT',
                 'constraint' => 11,
                 'auto_increment' => TRUE
             ),
-            'desc_tipo' => array(
+            'desc_recurso' => array(
                 'type' => 'VARCHAR',
                 'constraint' => 100,
                 'null' => false
             ),
 
+
         ));
-        $this->dbforge->add_key('id_tipo_usuario');
-        $this->dbforge->create_table('tipo_usuario');
+        $this->dbforge->add_key('id_recurso');
+        $this->dbforge->create_table('Recursos');
 
     }
 
