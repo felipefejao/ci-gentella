@@ -1,6 +1,8 @@
 <?php
 class Migration_Users extends CI_Migration{
     public function up(){
+
+
         $this->dbforge->add_field(array(
             'id_user' => array(
                 'type' => 'INT',
@@ -10,7 +12,7 @@ class Migration_Users extends CI_Migration{
             'login' => array(
                 'type' => 'varchar',
                 'constraint' => 250,
-                'unsigned' => true
+                'null' => false
             ),
             'email' => array(
                 'type' => 'varchar',
@@ -41,6 +43,6 @@ class Migration_Users extends CI_Migration{
     }
 
     public function down(){
-        $this->db_forge->drop_table('users');
+        $this->dbforge->drop_table('users');
     }
 }

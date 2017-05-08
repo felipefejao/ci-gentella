@@ -1,6 +1,7 @@
 <?php
 class Migration_Tipo_usuario extends CI_Migration{
     public function up(){
+
         $this->dbforge->add_field(array(
             'id_tipo_usuario' => array(
                 'type' => 'INT',
@@ -20,6 +21,6 @@ class Migration_Tipo_usuario extends CI_Migration{
     }
 
     public function down(){
-        $this->db_forge->drop_table('tipo_usuario');
+        $this->dbforge->drop_table('tipo_usuario');
     }
 }
